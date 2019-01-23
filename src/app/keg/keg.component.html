@@ -1,0 +1,32 @@
+<ul>
+  <li [class]="inventoryColor(keg)" *ngFor="let keg of stock">
+    <span>Name: {{keg.name}} </span><br>
+    <span>Style: {{keg.style}} </span><br>
+    <span [class]="priceColor(keg)">Price: ${{keg.price}}</span><br>
+    <span>Alc%: {{keg.alcohol}}</span><br>
+    <span>Inventory: {{keg.amount}} pints</span>
+    <button (click)="pourPint(keg)">Pour Pint</button> <button (click)="pourGrowler(keg)">Pour
+      Growler</button><button (click)="pourLgGrowler(keg)">Pour
+      Lg Growler</button> <button (click)="refillKeg(keg)">Refill</button> <br>
+    <label>Edit this Keg:</label>
+    <input #kegName placeholder="{{keg.name}}">
+    <input #kegStyle placeholder="{{keg.style}}">
+    <input #kegPrice placeholder="{{keg.price}}">
+    <input #kegAmount placeholder="{{keg.alcohol}}">
+    <button (click)="edit(keg, kegName.value, kegStyle.value, kegPrice.value, kegAmount.value)">Edit</button>
+  </li>
+
+</ul>
+
+<div>
+  <label>Add a new Keg:</label>
+  <input #kegName placeholder="Name">
+  <input #kegStyle placeholder="Style">
+  <input #kegPrice placeholder="Price">
+  <input #kegAmount placeholder="Alcohol Content">
+  <button (click)="submitForm(kegName.value, kegStyle.value, kegPrice.value, kegAmount.value)">Tap Keg</button>
+</div>
+
+<div>
+
+</div>
