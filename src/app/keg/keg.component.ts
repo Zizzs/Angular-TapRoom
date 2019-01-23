@@ -30,6 +30,10 @@ export class KegComponent {
     }
   }
 
+  findPercentage(keg) {
+    return Math.floor(keg.amount / 124 * 100);
+  }
+
   priceColor(keg) {
     if (keg.price >= 10) {
       return "bg-danger";

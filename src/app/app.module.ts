@@ -5,11 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { KegComponent } from './keg/keg.component';
 
+import { PositiveAmountPipe } from './positiveamount.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    KegComponent
+    KegComponent,
+    PositiveAmountPipe
   ],
   imports: [
     BrowserModule
